@@ -1,15 +1,14 @@
+@login
 Feature: Login functionality
-  @login
+
   Scenario: Login with valid credentials
     Given I navigate to home page
-    Then I click on login button
-    And I type "bayqatraining@gmail.com" as a login
-    And I type "Root123456@" as a password
+    And I type "rbt" as a login
+    And I type "lishan*" as a password
     Then I click on Signin button
-    And I should be signed-in as a user "Aleks"
+    And I should be signed-in as a user "Demo User (FORT Warehouse Demo)"
 
   Scenario: Login with valid credentials(using nested step)
-    #run at home
     Given I navigate to home page
-    Given I should be signed in with "bayqatraining@gmail.com" and "Root123456@"
+    Given I should be signed in with "rbt" and "lishan*"
 

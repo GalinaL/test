@@ -1,11 +1,11 @@
 class HomePage < PageActions
 
   def path
-    "http://www.usps.com"
+    "dev.fortwarehouse.com:8950"
   end
 
   def login_button
-    @browser.find_element(:id, "anchor-login")
+    @browser.find_element(:xpath, "html/body/table[1]/tbody/tr[2]/td/table/tbody/tr/td[2]/b")
   end
 
   def calculate_price

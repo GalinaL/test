@@ -11,9 +11,9 @@ Dir["../page_models/*.rb"].each {|file| require file}
 
 
 SERVER_LABELS = {
-    :production => "usps.com",
-    :trunk => "trunk.usps.com",
-    :integration => "integration.usps.com"
+    :production => "http://dev.fortwarehouse.com:8950",
+    :trunk => "http://dev.fortwarehouse.com:8950",
+    :integration => "http://dev.fortwarehouse.com:8950"
 }
 
 def get_browser

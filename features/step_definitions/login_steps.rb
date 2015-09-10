@@ -3,10 +3,6 @@ Given(/^I navigate to home page$/) do
   usps.home_page.visit
 end
 
-Then(/^I click on login button$/) do
-  usps.home_page.login_button.click
-end
-
 And(/^I type "([^"]*)" as a login$/) do |login|
   usps.login_page.login_field.send_keys login
 end
@@ -20,13 +16,12 @@ Then(/^I click on Signin button$/) do
 end
 
 And(/^I should be signed\-in as a user "([^"]*)"$/) do |name|
-  expect(usps.home_page.login_button.text).to be == "Hi, #{name}"
+  expect(usps.home_page.login_button.text).to be == name
 
 end
 
 Given(/^I should be signed in with "([^"]*)" and "([^"]*)"$/) do |login, password|
   steps %{
-    Then I click on login button
     And I type "#{login}" as a login
     And I type "#{password}" as a password
     Then I click on Signin button

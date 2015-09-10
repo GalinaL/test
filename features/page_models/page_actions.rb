@@ -12,7 +12,8 @@ class PageActions
     #original location for path: HomePage class
     initial_url = self.path
     #initial_url == "http://www.usps.com"
-    initial_url.gsub!("usps.com", get_environment)
+    initial_url.gsub!("dev.fortwarehouse.com:8950", get_environment)
+    # initial_url.gsub!("dev.fortwarehouse.com:8950", "dev.fortwarehouse.com:8950")
    end
 
 
