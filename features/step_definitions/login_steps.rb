@@ -26,6 +26,7 @@ Given(/^I should be signed in with "([^"]*)" and "([^"]*)"$/) do |login, passwor
     And I type "#{password}" as a password
     Then I click on Signin button
     }
+  # binding.pry
 end
 
 Then(/^I press calculate a price link$/) do

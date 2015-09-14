@@ -16,4 +16,12 @@ class USPS < PageActions
     @product_page ||= ProductPage.new @browser
   end
 
+  def admin_page
+    @admin_page ||= AdminPage.new @browser
+  end
+
+  def orders_page
+    @orders_page ||= OrdersPage.new @browser
+  end
+
 end

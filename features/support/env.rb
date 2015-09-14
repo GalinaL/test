@@ -3,6 +3,7 @@ require "rspec"
 
 require 'json'
 require 'net/http'
+require 'pry'
 
 
 require_relative "../page_models/page_actions.rb"
