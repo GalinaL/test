@@ -27,19 +27,23 @@ Feature: General
     And I create a new company "w_automation"
 
   Scenario: Create a new product
-    And I create a new product "red_wine" for the company w_automation
+    And I create a new product "red_wine" for the company w_auto
     Then I delete the product red_wine
 
+  Scenario: Error handling - delete the product with inventory
+
+  Scenario: Delete product without inventory
+
   Scenario: Create a new physical kit
-    And I create a physical kit "physical_kit" for the company w_automation
+    And I create a physical kit "physical_kit" for the company w_auto
     Then I delete kit
 
   Scenario: Create a new hybrid kit
-    And I create a physical kit "hybrid_kit" for the company w_automation
+    And I create a physical kit "hybrid_kit" for the company w_auto
     Then I delete kit
 
   Scenario: Create a new virtual kit
-    And I create a physical kit "virtual_kit" for the company w_automation
+    And I create a physical kit "virtual_kit" for the company w_auto
     Then I delete kit
 
   Scenario: Search for some specific product
