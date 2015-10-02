@@ -4,6 +4,7 @@ require "rspec"
 require 'json'
 require 'net/http'
 require 'pry'
+require 'watir-webdriver'
 
 
 require_relative "../page_models/page_actions.rb"

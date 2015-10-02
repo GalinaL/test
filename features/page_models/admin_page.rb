@@ -12,7 +12,7 @@ def create_company
 end
 
   def company_type
-    binding.pry
+    # binding.pry
     @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[10]/td[2]/select/option[9]")
   end
 
@@ -32,7 +32,7 @@ end
 
   def company_zip
     # binding.pry
-    @browser.find_element(:id, "Billing_Zip")
+    @browser.find_element(:xpath, ".//*[@id='Zip']")
   end
 
   def company_email
@@ -44,11 +44,38 @@ end
   end
 
   def company_packages
-    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[72]/td/table/tbody/tr[2]/td[1]/select/option[52]").click
-    @browser.find_element(:css, "input.Button").click
-    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[72]/td/table/tbody/tr[2]/td[1]/select/option[73]").click
-    @browser.find_element(:css, "input.Button").click
-    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[72]/td/table/tbody/tr[2]/td[1]/select/option[56]").click
-    @browser.find_element(:css, "input.Button").click
+    # binding.pry
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[1]/select/option[3]").click
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[2]/input[1]").click
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[1]/select/option[30]").click
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[2]/input[1]").click
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[1]/select/option[53]").click
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[73]/td/table/tbody/tr[2]/td[2]/input[1]").click
   end
+
+  def company_upload_format
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[77]/td[2]/select/option[6]")
+  end
+
+  def company_fulfilment_group
+    @browser.find_element(:xpath, ".//*[@id='Default_750_Fulfillment_Group']/option[2]")
+  end
+
+  def company_create_button
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[139]/td/table/tbody/tr[1]/td[2]/input")
+  end
+
+  def company_name
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[6]/td[2]")
+  end
+
+  def shut_donw_alert
+    @browser.switch_to().alert().accept()
+  end
+
+  def delete_company_button
+    @browser.find_element(:xpath, ".//*[@id='Company_Form']/table/tbody/tr[140]/td/table/tbody/tr/td/input[1]").click
+    shut_donw_alert
+  end
+
 end

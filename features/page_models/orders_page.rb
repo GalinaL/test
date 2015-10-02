@@ -13,6 +13,7 @@ class OrdersPage < PageActions
    # element.send_keys   "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
   # I need to add a real file for upload, order_upload_test.rtf was added as an example
     element.send_keys "/Users/galinaluzyanina/Desktop/order_upload_test.rtf"
+    sleep 10
     # @browser.find_element(:css, "input.btn").click
   end
 
