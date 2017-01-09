@@ -20,5 +20,3 @@ After do |scenario|
   @browser.quit if @browser !=nil
 end
 
-
-

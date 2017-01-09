@@ -9,7 +9,7 @@ class LoginPage < PageActions
   end
 
   def signin_button
-    @browser.find_element(:xpath, "html/body/div[1]/table/tbody/tr/td[2]/div[2]/div/form/div/input[4]")
+    @browser.find_element(:css, ".login > input:nth-child(11)")
   end
 
 

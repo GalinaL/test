@@ -13,6 +13,7 @@ end
 
 Then(/^I click on Signin button$/) do
   usps.login_page.signin_button.click
+  sleep 3
 end
 
 And(/^I should be signed\-in as a user "([^"]*)"$/) do |name|

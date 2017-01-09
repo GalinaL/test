@@ -6,6 +6,8 @@ class PageActions
 
   def visit
     @browser.navigate.to build_url
+    # @browser.navigate.to 'dev.fortwarehouse.com:8950'
+    # @browser.navigate.to build_url
   end
 
   def build_url
